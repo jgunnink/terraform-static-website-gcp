@@ -1,7 +1,7 @@
 terraform {
-  # backend "gcs" {
-  #   # Bucket is passed in via cli arg. Eg, terraform init -reconfigure -backend-configuration=dev.tfbackend
-  # }
+  backend "gcs" {
+    bucket = "terraform-state-bucket-static-website-jk"
+  }
 }
 
 provider "google" {
